@@ -10,7 +10,7 @@ def contact(request):
             data = form.cleaned_data
 
             send_mail(
-                '[Portfolio - Contact] Email from Django Contact Form', 
+                '[MyWebPage - Contact] Email from Django Contact Form', 
                 data['message'] + '\n\n' + data['name'] + '\n' + data['email'] + '\n' + data['company'],
                 None,
                 ['sergifusterdura@gmail.com'],
