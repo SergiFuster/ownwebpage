@@ -60,7 +60,7 @@ ROOT_URLCONF = "ownwebpage.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["ownwebpage/templates"],
+        "DIRS": ["ownwebpage/templates", "ownwebpage/templates/cards", "home/templates/experience_cards/", "home/templates/education_cards/"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
