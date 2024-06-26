@@ -8,13 +8,7 @@
 <body>
     {% extends 'base.html' %}
     {% block content %}
-        <h1>Filter</h1>
-        <ul>
-            {% for value, label in filter.form.date.field.choices %}
-                <li><a href="?date={{ value }}">{{ label }}</a></li>
-            {% endfor %}
-        </ul>
-        <h1>Post List</h1>
+        {% include 'blog_filter.html' with filter=filter %}
         {% include 'blog_content.html' with posts=filter.qs %}
     {% endblock %}
 

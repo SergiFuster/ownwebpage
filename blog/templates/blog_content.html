@@ -6,12 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        {% for post in posts %}
-            <li>
-                {% include 'post.html' with post=post %}
-            </li>
-        {% endfor %}
-    </ul>
+    <h1 class="lead display-1 container bottom_slide">Post List</h1>
+    {% for post in posts %}
+        <div class="container">
+            {% include 'post.html' with post=post %}
+        </div>
+    {% endfor %}
 </body>
 </html>

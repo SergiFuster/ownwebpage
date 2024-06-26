@@ -6,15 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Title</th>
-            <td>{{ post.title }}</td>
-        </tr>
-        <tr>
-            <th>Content</th>
-            <td>{{ post.content }}</td>
-        </tr>
-    </table>
+    {% extends 'card3.html' %}
+    {% block title %}{{ post.title }}{% endblock %}
+    {% block description %}{{ post.content }}{% endblock %}
 </body>
 </html>

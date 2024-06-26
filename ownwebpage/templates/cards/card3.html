@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card my-5 right_slide">
+        <div class="card-header bg-dark">
+            <p class="lead text-white">Title: {% block title %} {% endblock %} </p> 
+        </div>
+        <div class="card-body">
+            <p class="lead">Description: </p>
+            <p class="card-text">{% block description %}{% endblock %}</p>
+        </div>
+    </div>
+</body>
+</html>
