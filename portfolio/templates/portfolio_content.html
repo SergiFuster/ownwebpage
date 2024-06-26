@@ -6,8 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    {% for project in projects %}
-        {% include "project.html" with project=project %}
-    {% endfor %}
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="row">
+            {% for project in projects %}
+                <div class="col-md-6 my-3">
+                    {% include "card4.html" with project=project %}
+                </div>
+                {% if forloop.counter|divisibleby:2 and not forloop.last %}
+                    </div><div class="row">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

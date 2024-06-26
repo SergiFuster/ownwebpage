@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title}}</h5>
+          <p class="card-text">{{ project.description }}</p>
+        </div>
+        <div class="card-header"><span class="lead text-primary">Technologies</span></div>
+        <ul class="list-group list-group-flush">
+            {% for technology in project.technologies.all %}
+                <li class="list-group-item">{{ technology.name }}</li>
+            {% endfor %}
+        </ul>
+        <div class="card-header"><span class="lead text-primary">Related Links</span></div>
+        <div class="card-body">
+            {% for link in project.links.all %}
+                <a class="card-link link-secondary" href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -6,10 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Filters</h1>
-    <form action="" method="get">
-        {{ filter.form.as_p }}
-        <input type="submit" value="Search">
-    </form>
+    <div class="container">
+        <h1>Filter Projects by Technology</h1>
+        <form class="card" method="get">
+            <div class="form-group">
+                <label class="card-header d-block lead" for="id_technologies">Technologies:</label>
+                <div class="row my-2 card-body">
+                    {% for checkbox in form.technologies %}
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                {{ checkbox.tag }}
+                                {{ checkbox.choice_label }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+    </div>
 </body>
 </html>
