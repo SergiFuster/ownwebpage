@@ -20,6 +20,7 @@ class Project(models.Model):
     description = models.TextField()
     links = models.ManyToManyField(Link, related_name='projects')
     technologies = models.ManyToManyField(Technology, related_name='projects')
-
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+    
     def __str__(self):
         return self.title
