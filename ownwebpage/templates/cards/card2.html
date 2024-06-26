@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid w-50 mb-5">
+        <div class="card">
+            <h4 class="card-header lead p-3">{% block title %}{% endblock %}</h4>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{% block item1 %}{% endblock %}</li>
+                            <li class="list-group-item">{% block item2 %}{% endblock %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{% block item3 %}{% endblock %}</li>
+                            <li class="list-group-item">{% block item4 %}{% endblock %}</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{% block item5 %}{% endblock %}</li>
+                            <li class="list-group-item">{% block item6 %}{% endblock %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+</body>
+</html>
