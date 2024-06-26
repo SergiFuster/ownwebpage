@@ -8,11 +8,7 @@
 <body>
     {% extends 'base.html' %}
     {% block content %}
-        <h1>Filters</h1>
-        <form action="" method="get">
-            {{ filter.form.as_p }}
-            <input type="submit" value="Search">
-        </form>
+        {% include 'portfolio_filter.html' with filter=filter %}
         {% include 'portfolio_content.html' with projects=filter.qs %}
     {% endblock %}
 </body>
