@@ -11,7 +11,8 @@
         {% if form %}
             {% include 'contact_content.html' with form=form%}
         {% else %}
-            <p>Thank you for your message.</p>
+            {% include 'success.html' with message="Thank you for your message."%}
+            {% include 'reload_button.html' with endpoint="contact" %}
         {% endif %}
     {% endblock %}
 </body>

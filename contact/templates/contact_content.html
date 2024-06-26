@@ -6,19 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
-        {% csrf_token %}
-
-        {% if form.errors %}
-            <p style="color: red;">
-                Please correct the error{{ form.errors|pluralize }} below.
-            </p>
-        {% endif %}
+    <div class="container bottom_slide">
         
-        <table>
-            {{ form.as_table }}
-        </table>
-        <input type="submit" value="Submit">
-    </form>
+        <form action="" method="post">{% csrf_token %}
+            {% if form.errors %}
+                {% include 'error.html' with message="Please correct the error/s above." %}
+            {% endif %}
+            <div class="form-group">
+                <p class="my-1">Name<span class="text-danger">*</span></p>
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                <p class="my-1">Email<span class="text-danger">*</span></p>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <p class="my-1">Company</p>
+                {{ form.company }}
+            </div>
+            <div class="form-group">
+                <p class="my-1">Message<span class="text-danger">*</span></p>
+                {{ form.message }}
+            </div>
+            <button class="btn btn-outline-primary my-2"type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+    </div>
+        
+    </div>
 </body>
 </html>
