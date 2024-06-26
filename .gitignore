@@ -1,0 +1,40 @@
+# Ignore Django related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Ignore development/test databases
+*.sqlite3
+
+# Ignore local settings
+local_settings.py
+
+# Ignore logs and staticfiles
+logs/
+static/
+
+# Ignore environment variables file
+.env
+
+# Ignore IDE files
+.vscode/
+*.swp
+
+# Ignore macOS file system metadata
+.DS_Store
+
+# Ignore Python bytecode cache (Python 3.2+)
+__pycache__/
+
+# Ignore pytest cache
+.cache/
+
+# Ignore pipenv virtual environment
+/.venv
+
+# Ignore coverage reports
+htmlcov/
+
+# Ignore any backup files
+*~
