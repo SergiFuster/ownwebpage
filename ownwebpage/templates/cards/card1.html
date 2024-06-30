@@ -9,13 +9,13 @@
     <div class="container-fluid w-50 mb-5 bottom_slide">
         <div class="card">
             <div class="card-header">
-                <p class="lead">{% block initial_date %}{% endblock %} - {% block final_date %}{% endblock %}</p>
-                <p class="lead">{% block rol %}{% endblock %}</p>
-                <p class="lead">{% block company %}{% endblock %}</p>
-                <p class="lead">{% block country %}{% endblock %}</p>
+                <p>Period: {% block initial_date %}{% endblock %} - {% block final_date %}{% endblock %}</p>
+                <p>Rol: {% block rol %}{% endblock %}</p>
+                <p>Institution: {% block company %}{% endblock %}</p>
+                <p>Country: {% block country %}{% endblock %}</p>
             </div>
             <div class="card-body">
-                <p class="card-text">{% block description %}{% endblock %} </p>
+                <p class="card-text lead">{% block description %}{% endblock %} </p>
             </div>
         </div>
     </div>

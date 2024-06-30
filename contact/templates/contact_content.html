@@ -6,8 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container bottom_slide">
-        
+    <div class="container bottom_slide my-5">
+        <p>With this form you can send easily a message to my personal e-mail service. </p>
+        <p>Feel free to write to me 😊</p>
         <form action="" method="post">{% csrf_token %}
             {% if form.errors %}
                 {% include 'error.html' with message="Please correct the error/s above." %}
@@ -17,7 +18,7 @@
                 {{ form.name }}
             </div>
             <div class="form-group">
-                <p class="my-1">Email<span class="text-danger">*</span></p>
+                <p class="my-1">Email<span class="text-danger"></span></p>
                 {{ form.email }}
             </div>
             <div class="form-group">
